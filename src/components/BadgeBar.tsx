@@ -1,27 +1,18 @@
-import { ReactNode } from "react";
+import Image from "next/image";
 
 interface BadgeBarProps {
-    children: ReactNode;
     count: number;
-    iconColor: string;
-    badgeColor: string;
-    textBadgerColor: string;
+    urlIcon: string;
 }
 
-const BadgeBar = ({
-    children,
-    count,
-    iconColor,
-    badgeColor,
-    textBadgerColor,
-}: BadgeBarProps) => {
+const BadgeBar = ({ urlIcon, count }: BadgeBarProps) => {
     return (
         <div
-            className={`${iconColor} rounded-full w-7 h-7 flex items-center justify-center cursor-pointer relative`}
+            className={`bg-white rounded-full w-7 h-7 flex items-center justify-center cursor-pointer relative`}
         >
-            {children}
+            <Image src={urlIcon} alt="" width={20} height={20} />
             <div
-                className={`absolute -top-3 -right-3 w-5 h-5 flex items-center justify-center ${badgeColor} ${textBadgerColor} rounded-full text-xs`}
+                className={`absolute -top-3 -right-3 w-5 h-5 flex items-center justify-center bg-purple-500 text-white rounded-full text-xs`}
             >
                 {count}
             </div>
