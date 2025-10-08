@@ -1,1 +1,20 @@
 @import "tailwindcss";
+
+@theme {
+    /* Colors */
+    --color-lamaSky: #c3ebfa;
+    --color-lamaSkyLight: #edf9fd;
+    --color-lamaPurple: #cfceff;
+    --color-lamaPurpleLight: #f1f0ff;
+    --color-lamaYellow: #fae27c;
+    --color-lamaYellowLight: #fefce8;
+
+    /* Gradients */
+    --background-image-gradient-radial: radial-gradient(
+        var(--tw-gradient-stops)
+    );
+    --background-image-gradient-conic: conic-gradient(
+        from 180deg at 50% 50%,
+        var(--tw-gradient-stops)
+    );
+}
